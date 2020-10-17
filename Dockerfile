@@ -19,5 +19,7 @@ RUN [ "pip", "install", "coscmd" ]
 
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
 
+RUN sources .bashrc
+
 # 安装 node
 RUN [ "nvm", "install", "12.19.0" ]
