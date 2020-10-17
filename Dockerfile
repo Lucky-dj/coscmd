@@ -17,9 +17,7 @@ COPY config/pip.conf .config/pip
 # 安装 coscmd
 RUN [ "pip", "install", "coscmd" ]
 
-RUN cat /etc/hosts
-
-RUN [ "curl", "-O", "https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh", "|", "bash" ]
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
 
 # 安装 node
 RUN [ "nvm", "install", "12.19.0" ]
