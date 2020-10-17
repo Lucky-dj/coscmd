@@ -2,10 +2,8 @@ FROM debian
 
 USER root
 
-RUN mv /ect/apt/sources.list /ect/apt/sources.list.bak
-
 # 替换源文件
-ADD apt/sources.list /ect/apt/sources.list
+COPY apt/sources.list /ect/apt/sources.list
 
 WORKDIR /root
 
